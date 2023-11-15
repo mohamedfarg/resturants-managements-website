@@ -1,0 +1,49 @@
+
+Restaurant
+- id (primary key)
+- name
+- address
+- phone_number
+- website
+
+
+Menu
+- id (primary key)
+- restaurant_id (foreign key to Restaurant)
+- name
+- description
+- price
+- category
+- ingredients
+
+Table
+- id (primary key)
+- restaurant_id (foreign key to Restaurant)
+- number
+- seating_capacity
+- status
+
+Order
+- id (primary key)
+- table_id (foreign key to Table)
+- customer_id (foreign key to Customer)
+- total_amount
+- order_date
+- order_time
+- order_status
+
+Order_Item
+- id (primary key)
+- order_id (foreign key to Order)
+- menu_item_id (foreign key to Menu_Item)
+- quantity
+- cooking_status
+- special_requests
+
+Customer
+- id (primary key)
+- name
+- contact_information
+- loyalty_card_number
+- food_allergies
+- dietary_restrictions
